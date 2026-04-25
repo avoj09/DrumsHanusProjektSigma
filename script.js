@@ -11,14 +11,19 @@ const snare2 = new Audio("drumbreaks/Crot snare 2.wav")
 const triplet = new Audio("drumbreaks/Crot triplet 1.wav")
 
 intputBtn.addEventListener("click",() => {
-
     if(input.value == ""){
-        alet("Zadejte něco")
+        alert("Zadejte něco")
     }
     else{
         const myInput = input.value;
         const predelInput = [...myInput];
-        for(let i = 0; i < predelInput.lengt; i++){
+        setInterval(getSound(predelInput), 1000)            
+    }
+    
+});
+
+function getSound(predelInput){
+     for(let i = 0; i < predelInput.lengt; i++){     
             if(predelInput[i] == "a"  || predelInput[i] == "A"){
                 output.innerHTML += `<div ="drums">a</div>`
                 breakRoll.play();
@@ -51,6 +56,5 @@ intputBtn.addEventListener("click",() => {
                 output.textContent = "wrong keys";
             }
         }
-    }
-    
-});
+    output.textContent = "konec :)";
+}
