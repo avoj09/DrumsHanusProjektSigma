@@ -1,6 +1,8 @@
 const input = document.getElementById("input")
 const intputBtn = document.getElementById("input-btn")
 const output = document.getElementById("output")
+const frekvence = document.getElementById("frekvence")
+const clearBtn = document.getElementById("clear-btn")
 
 const breakRoll = new Audio("drumbreaks/Crot_Break_roll_1.wav")
 const kick = new Audio("drumbreaks/Crot kick 1.wav")
@@ -10,17 +12,25 @@ const snare1 = new Audio("drumbreaks/Crot snare 1.wav")
 const snare2 = new Audio("drumbreaks/Crot snare 2.wav")
 const triplet = new Audio("drumbreaks/Crot triplet 1.wav")
 
+clearBtn.addEventListener("click",() =>{
+    output.innerHTML = "";
+    input.value = "";
+    frekvence.value = "";
+})
+
 intputBtn.addEventListener("click",() => {
-    if(input.value == ""){
-        alert("Zadejte něco")
+    output.innerHTML = "";
+    output.textContent = "";
+    let regex = /[0-9]/g;
+    if(input.value == "" || frekvence.value == "" || !frekvence.value.match(regex)){
+        alert("Zadejte něco nebo je něco špatně zadáno")
     }
     else{
+        const frekvenceSet = Number(frekvence.value)
         const myInput = input.value;
         const predelInput = [...myInput];
-        console.log(myInput)
-        console.log(predelInput)
         for(let i = 0; i < predelInput.length; i++){ 
-            setTimeout( () => {getSound(i,predelInput)}, 1000 * i);
+            setTimeout( () => {getSound(i,predelInput)}, frekvenceSet * i);
         }    
     }       
     
@@ -57,5 +67,6 @@ function getSound(i,predelInput){
             }
             else{
                 output.textContent = "wrong keys";
+                // break;
             }
 }
