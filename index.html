@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
-    <link rel="stylesheet" type="text/css" href="./styles.css"> 
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>67 Ultimate Drums Mixer</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
     <header>
-        <h1>67 Ultimate drums mixer 67</h1>        
-    </header>
-    <body>
-        <!-- <style src="styles.css"></style>     -->
-        <div>
-            Zadejte sem písmena (jen a,s,d,f,g,h,j):<input id="input">
-            Zadej frekvenci v milisekundach: <input id="frekvence">
-            <button id="input-btn">Start</button>
-            <button id="clear-btn">Clear</button>
-            <div id="output"></div>     
+        <div id="h1-div">
+            <h1>67 Ultimate drums mixer 67</h1>
         </div>
-    </body>
+    </header>
+
+    <div id="letters-input" class="inputs">
+        Zadejte sem písmena (jen a,s,d,f,g,h,j): 
+        <input id="input" type="text">
+    </div>
+    <div id="frekvence-div" class="inputs">
+        Zadej frekvenci v milisekundach: 
+        <input id="frekvence" type="number">
+    </div>
+    <div id="start-clear-div">
+        <button id="input-btn">Start</button>
+        <button id="clear-btn">Clear</button>
+    </div>
+    <div id="buttons-div">
+        <button id="btn1">breakRoll</button>
+        <button id="btn2">kick</button>
+        <button id="btn3">ride1</button>
+        <button id="btn4">ride2</button>
+        <button id="btn5">snare1</button>
+        <button id="btn6">snare2</button>
+        <button id="btn7">triplet</button>
+    </div>
+    <div id="output"></div>
+    
+
     <script src="./script.js"></script>
+</body>
 </html>
