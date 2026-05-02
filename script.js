@@ -68,35 +68,43 @@ btn7.addEventListener("click",()=>{
 
 function getSound(i,predelInput){
             if(predelInput[i] == "a"  || predelInput[i] == "A"){
-                output.innerHTML += `<div id="drums">a</div>`
+                const aDiv =`<div class="drums" id="drums-a">a</div>`
+                output.innerHTML += aDiv
                 playNode(breakRoll)
             }
             else if(predelInput[i] == "z" || predelInput[i] == "Z"){
-                output.innerHTML += `<div id="drums">zkouska</div>`
+                const zDiv =`<div class="drums" id="drums-z">z</div>`
+                output.innerHTML += zDiv
                 playNode(zkouska)
             }
             else if(predelInput[i] == "s"  || predelInput[i] == "S"){
-                output.innerHTML += `<div id="drums">s</div>`
+                const sDiv =`<div class="drums" id="drums-s">s</div>`
+                output.innerHTML += sDiv
                 playNode(kick)
             }
             else if(predelInput[i] == "d"  || predelInput[i] == "D"){
-                output.innerHTML += `<div id="drums">d</div>`
+               const dDiv =`<div class="drums" id="drums-d">d</div>`
+                output.innerHTML += dDiv
                 playNode(ride1)
             }
             else if(predelInput[i] == "f"  || predelInput[i] == "F"){
-                output.innerHTML += `<div id="drums">f</div>`
+                const fDiv =`<div class="drums" id="drums-f">f</div>`
+                output.innerHTML += fDiv
                 playNode(ride2)
             }
             else if(predelInput[i] == "g"  || predelInput[i] == "G"){
-                output.innerHTML += `<div id="drums">g</div>`
+                const gDiv =`<div class="drums" id="drums-g">g</div>`
+                output.innerHTML += gDiv
                 playNode(snare1)
             }
             else if(predelInput[i] == "h"  || predelInput[i] == "H"){
-                output.innerHTML += `<div id="drums">h</div>`
+                const hDiv =`<div class="drums" id="drums-h">h</div>`
+                output.innerHTML += hDiv
                 playNode(snare2)
             }
             else if(predelInput[i] == "j"  || predelInput[i] == "J"){
-                output.innerHTML += `<div id="drums">j</div>`
+                const jDiv =`<div class="drums" id="drums-j">j</div>`
+                output.innerHTML += jDiv
                 playNode(triplet)
             }
             else{

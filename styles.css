@@ -28,6 +28,21 @@ h1{
 .inputs{
     color: rgb(113, 113, 254);
 }
-#drums{
+.drums{
     color: rgb(113, 113, 254);
+    display: flex;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: blueviolet;
+}
+#output{
+    margin-top: 10px;
+    background-color: rgb(25, 25, 82);;
+    display: flex;
+    color: rgb(113, 113, 254);;
+}
+#buttons-div{
+    margin-top: 5px;
 }
