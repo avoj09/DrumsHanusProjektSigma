@@ -11,14 +11,14 @@ const btn5 = document.getElementById("btn5")
 const btn6 = document.getElementById("btn6")
 const btn7 = document.getElementById("btn7")
 
-const breakRoll = new Audio("drumbreaks/Crot_Break_roll_1.wav")
-const kick = new Audio("drumbreaks/Crot kick 1.wav")
-const ride1 = new Audio("drumbreaks/Crot ride 1.wav")
-const ride2 = new Audio("drumbreaks/Crot ride 2.wav")
-const snare1 = new Audio("drumbreaks/Crot snare 1.wav")
-const snare2 = new Audio("drumbreaks/Crot snare 2.wav")
-const triplet = new Audio("drumbreaks/Crot triplet 1.wav")
-const zkouska = new Audio("drumbreaks/zkouska.mp3")
+const breakRoll = new Audio("nove drums/1.wav")
+const kick = new Audio("nove drums/2.wav")
+const ride1 = new Audio("nove drums/3.wav")
+const ride2 = new Audio("nove drums/4.wav")
+const snare1 = new Audio("nove drums/5.wav")
+const snare2 = new Audio("nove drums/6.wav")
+const triplet = new Audio("nove drums/7.wav")
+const zkouska = new Audio("nove drums/8.wav")
 
 clearBtn.addEventListener("click",() =>{
     output.innerHTML = "";
