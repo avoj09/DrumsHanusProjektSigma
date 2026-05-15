@@ -19,6 +19,9 @@ const snare1 = new Audio("nove drums/5.wav")
 const snare2 = new Audio("nove drums/6.wav")
 const triplet = new Audio("nove drums/7.wav")
 const zkouska = new Audio("nove drums/8.wav")
+const synth1 = new Audio("sytnhfff/synth1.wav")
+const synth2 = new Audio("sytnhfff/synth2.wav")
+const synth3 = new Audio("sytnhfff/synth3.wav")
 
 clearBtn.addEventListener("click",() =>{
     output.innerHTML = "";
@@ -67,45 +70,38 @@ btn7.addEventListener("click",()=>{
 });
 
 function getSound(i,predelInput){
-            if(predelInput[i] == "a"  || predelInput[i] == "A"){
-                const aDiv =`<div class="drums" id="drums-a">a</div>`
-                output.innerHTML += aDiv
+            if(predelInput[i] == "a"  || predelInput[i] == "A" || predelInput[i] == "q"  || predelInput[i] == "Q" || predelInput[i] == "z"  || predelInput[i] == "Z"){
                 playNode(breakRoll)
             }
-            else if(predelInput[i] == "z" || predelInput[i] == "Z"){
-                const zDiv =`<div class="drums" id="drums-z">z</div>`
-                output.innerHTML += zDiv
+            else if(predelInput[i] == "k" || predelInput[i] == "K" || predelInput[i] == "i"  || predelInput[i] == "I"){
                 playNode(zkouska)
             }
-            else if(predelInput[i] == "s"  || predelInput[i] == "S"){
-                const sDiv =`<div class="drums" id="drums-s">s</div>`
-                output.innerHTML += sDiv
+            else if(predelInput[i] == "s"  || predelInput[i] == "S" || predelInput[i] == "w"  || predelInput[i] == "W" || predelInput[i] == "x"  || predelInput[i] == "X"){
                 playNode(kick)
             }
-            else if(predelInput[i] == "d"  || predelInput[i] == "D"){
-               const dDiv =`<div class="drums" id="drums-d">d</div>`
-                output.innerHTML += dDiv
+            else if(predelInput[i] == "d"  || predelInput[i] == "D" || predelInput[i] == "e"  || predelInput[i] == "E" || predelInput[i] == "c"  || predelInput[i] == "C"){
                 playNode(ride1)
             }
-            else if(predelInput[i] == "f"  || predelInput[i] == "F"){
-                const fDiv =`<div class="drums" id="drums-f">f</div>`
-                output.innerHTML += fDiv
+            else if(predelInput[i] == "f"  || predelInput[i] == "F" || predelInput[i] == "r"  || predelInput[i] == "R" || predelInput[i] == "v"  || predelInput[i] == "V"){
                 playNode(ride2)
             }
-            else if(predelInput[i] == "g"  || predelInput[i] == "G"){
-                const gDiv =`<div class="drums" id="drums-g">g</div>`
-                output.innerHTML += gDiv
+            else if(predelInput[i] == "g"  || predelInput[i] == "G" || predelInput[i] == "t"  || predelInput[i] == "T" || predelInput[i] == "b"  || predelInput[i] == "B"){
                 playNode(snare1)
             }
-            else if(predelInput[i] == "h"  || predelInput[i] == "H"){
-                const hDiv =`<div class="drums" id="drums-h">h</div>`
-                output.innerHTML += hDiv
+            else if(predelInput[i] == "h"  || predelInput[i] == "H" || predelInput[i] == "y"  || predelInput[i] == "Y" || predelInput[i] == "n"  || predelInput[i] == "N"){
                 playNode(snare2)
             }
-            else if(predelInput[i] == "j"  || predelInput[i] == "J"){
-                const jDiv =`<div class="drums" id="drums-j">j</div>`
-                output.innerHTML += jDiv
+            else if(predelInput[i] == "j"  || predelInput[i] == "J" || predelInput[i] == "u"  || predelInput[i] == "U" || predelInput[i] == "m"  || predelInput[i] == "M"){
                 playNode(triplet)
+            }
+            else if(predelInput[i] == "o"  || predelInput[i] == "O"){
+                playNode(synth1)
+            }
+            else if(predelInput[i] == "l"  || predelInput[i] == "L"){
+                playNode(synth2)
+            }
+            else if(predelInput[i] == "p"  || predelInput[i] == "P"){
+                playNode(synth3)
             }
             else{
                 output.textContent = "wrong keys";
